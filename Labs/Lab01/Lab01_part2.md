@@ -205,8 +205,22 @@ Before we solve that problem, let's just digest the command, and turn it from BA
 
 Problems which involve applications of tools described previously in this lab:
 * Which tool from above could you add on to the `cut` example above to get the output to go into a file instead of into the terminal window?
+
+$ cut -f 2-4 -d , PredPreyData.csv > PredPreyDataCUT.csv
+
 * How could you combine the `cut` example above with some other tools above to see only the last 10 lines of output?
+
+$ cut -f 2-4 -d , PredPreyData.csv > PredPreyDataCUT.csv
+$ tail PredPreyDataCUT.csv
+
 * How could you, perhaps in multiple commands, make a new data file that had (i) only columns 2-4, (ii) the header row, and (iii) only the last 10 lines of data?  In other words, what commands could you issue to create a new `.csv` file with 11 lines of data total and three columns total, in which the top line should be the original headers, and the other 10 lines should be the last 10 lines of the original data?
+
+$ grep time PredPreyData.csv > PredPreyDataCUT.csv
+$ tail PredPreyData.csv >> PredPreyDataCUT.csv
+$ cut -f 2-4 -d , PredPreyDataCUT.csv > PredPreyDataSmall.csv
+                                   
+
+
 
 
 
