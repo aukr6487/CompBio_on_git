@@ -2,7 +2,7 @@
 rm(list = ls())
 
 # change the next line to work for your computer:
-setwd("~/compbio/CompBio_on_git/Datasets/JoiningMultipleData/")
+setwd("~/Desktop/Classes/EBIO_5420/compBioSandbox/CompBio_on_git/Datasets/JoiningMultipleData/")
 
 # Load in some fake data on some imaginary field sites and experiments
 
@@ -39,7 +39,7 @@ require("dplyr")
 # the four most common types of "joins"
 # taken one at a time, what do we learn from each?
 # note we are not even telling  dplyr's functions what to join "by"
-inner_join( x = Sites1, y = Sites3 ) # inner_join is also sometimes called "natural join"
+inner_join( x = Sites3, y = Sites1 ) # inner_join is also sometimes called "natural join"
 inner_join( Sites3, Sites1 ) # occassionally inner_join is called "join"
 
 right_join( x = Sites1, y = Sites3 ) # also sometimes called "right outer join"
